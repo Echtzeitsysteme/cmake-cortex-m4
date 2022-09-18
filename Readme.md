@@ -2,7 +2,7 @@
 
 ## **DOES NOT FULLY WORK IN ITS CURRENT STATE**
 current issues: 
-- [lib/gfx.c](lib/gfx.c:539) does not properly link against sprintf because of missing __aeabi_f2d. It's not the 'float literals are doubles by default' issue, its something else. Enable [-Wdouble-promotion](CMakeLists.txt:94) to see that it's a different issue. 
+- [lib/gfx.c](lib/gfx.c:539) does not properly link against sprintf because of missing __aeabi_f2d. It's not the 'float literals are doubles by default' issue, its something else. Enable [-Wdouble-promotion](./CMakeLists.txt:94) to see that it's a different issue. 
 - flashing target. ... yea, kindof important part 
 
 ## Instructions
