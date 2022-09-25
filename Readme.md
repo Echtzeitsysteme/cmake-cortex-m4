@@ -3,6 +3,8 @@
 ## **DOES NOT FULLY WORK IN ITS CURRENT STATE**
 current issues: 
 - [lib/gfx.c](lib/gfx.c:539) does not properly link against sprintf because of missing __aeabi_f2d. It's not the 'float literals are doubles by default' issue, its something else. Enable [-Wdouble-promotion](./CMakeLists.txt:94) to see that it's a different issue. 
+  The documentation for my compiler (`share/doc/gcc-arm-none-eabi/html/libc/siprintf.html`) specifies that only integer format specifiers are supported by this version.
+  However, seeing as this function isn't currently used currently used (in the main project) it should just be save to comment out the call to sprintf.
 - flashing target. ... yea, kindof important part 
 
 ## Instructions

@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.3)
 
 set(PDL "C:/PortableApps/Cypress/PDL/2.1.0")
-set(COMPILER_PATH_HINT "C:/PortableApps/iSYSTEM/winIDEAOpen9/gcc/arm")
+#set(COMPILER_PATH_HINT "C:/PortableApps/iSYSTEM/winIDEAOpen9/gcc/arm")
+set(COMPILER_PATH_HINT "C:/PortableApps/gcc-arm-none-eabi-10.3-2021.10/")
 
 find_program(ARM_NONE_EABI_GCC
   "arm-none-eabi-gcc"
@@ -113,6 +114,7 @@ set(COMMON_COMPILER_LINK_OPTIONS
   "-nodefaultlibs"
   "-fno-exceptions"
   "--specs=nano.specs"
+  #"-u" "_printf_float" // requires even more aeabi memes
 )
 set(CMAKE_C_LINKER_WRAPPER_FLAG "-Xlinker" " ")
 unset(CMAKE_C_LINKER_WRAPPER_FLAG_SEP)
