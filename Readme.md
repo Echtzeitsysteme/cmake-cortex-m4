@@ -8,10 +8,15 @@ current issues:
 - flashing target. ... yea, kindof important part 
 
 ## Requirements
+Compilation: 
 - [gcc-arm-none-eabi](https://developer.arm.com/downloads/-/gnu-rm)
 - [cmake](https://cmake.org/download/)
 - some generator, could be msvc, [Ninja](https://github.com/ninja-build/ninja/releases) or something else (tested with Ninja)
+- an "installation" of the [PDL (PeripheralDriverLibrary)](http://www.cypress.com/documentation/software-and-drivers/peripheral-driver-library-pdl) from Cypress 
 
+Flashing/Debugging: (WIP)
+-  CmsisDapDriver (CmsisDapDriverInstallerV14.exe), might also work with different versions.
+- [DapLink](https://daplink.io/) might also be an option
 ## Instructions
 
 0. clone the project: `git clone git@github.com:SaculRennorb/cmake-cortex-m4.git`
