@@ -31,10 +31,15 @@ set(CMAKE_C_OUTPUT_EXTENSION   ".o")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin")
 set(CMAKE_EXECUTABLE_SUFFIX ".elf")
 
+set(COMPILER_INCLUDE_PATH "../../arm-none-eabi/include")
+cmake_path(ABSOLUTE_PATH COMPILER_INCLUDE_PATH
+  BASE_DIRECTORY ${ARM_NONE_EABI_GCC}
+  NORMALIZE
+)
 include_directories(
   "lib"
   "solution"
-  "${COMPILER_PATH_HINT}/arm-none-eabi/include"
+  ${COMPILER_INCLUDE_PATH}
   "${PDL}/devices/fm4/s6e2ccxj/common"
   "${PDL}/cmsis/include"
   "${PDL}/drivers/mfs"
